@@ -1,4 +1,1 @@
-<li><a href="#!about" onclick=fetchPage("about")> About 룰랄루라 </a></li>
-<li> <a href="#!심리검사" onclick=fetchPage("심리검사")>심리검사</a></li>
-<li> <a href="#!다이어리" onclick=fetchPage("다이어리")>Plan</a></li>
-<li><a href="#!contact" onclick=fetchPage("contact")>Contact</a></li>
+about 룰랄루라, 심리검사, 다이어리, contact
