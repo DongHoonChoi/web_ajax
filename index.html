@@ -20,38 +20,10 @@
   <div id="grid">
 
     <ol>
-      <li><a href="#!about" onclick="
-        fetch('about').then(function(response){
-          response.text().then(function(text){
-            document.querySelector('article').innerHTML = text;
-
-          })
-        });
-        "> About 룰랄루라 </a></li>
-      <li> <a href="심리검사" onclick="
-        fetch('심리검사').then(function(response){
-          response.text().then(function(text){
-            document.querySelector('article').innerHTML = text;
-
-          })
-        });
-        ">심리검사</a></li>
-      <li> <a href="다이어리" onclick="
-        fetch('다이어리').then(function(response){
-          response.text().then(function(text){
-            document.querySelector('article').innerHTML = text;
-
-          })
-        });
-        ">Plan</a></li>
-      <li><a href="contact" onclick="
-        fetch('contact').then(function(response){
-          response.text().then(function(text){
-            document.querySelector('article').innerHTML = text;
-
-          })
-        });
-        ">Contact</a></li>
+      <li><a href="#!about" onclick=fetchPage("about")> About 룰랄루라 </a></li>
+      <li> <a href="#!심리검사" onclick=fetchPage("심리검사")>심리검사</a></li>
+      <li> <a href="#!다이어리" onclick=fetchPage("다이어리")>Plan</a></li>
+      <li><a href="#!contact" onclick=fetchPage("contact")>Contact</a></li>
     </ol>
     <article>
     </article>
@@ -67,6 +39,18 @@
   <input type ="button" value="night" onclick="
     nightDay(this)">
   <script>
+  function fetchPage(name){}
+  fetch(name).then(function(response){
+    response.text().then(function(text){
+      document.querySelector('article').innerHTML = text;
+
+    })
+  });
+}
+  function fetchPage(name){
+    fetch(name).then(function(response))
+    {response.text().thenfunction(text){document.}}
+  }
     if(location.hash){
       fetchPage(location.hash.subst(2));
     }else{
