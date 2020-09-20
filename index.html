@@ -44,8 +44,11 @@
     })
   });
   function fetchPage(name){
-    fetch(name).then(function(response))
-    {response.text().thenfunction(text){document.}}
+    fetch(name).then(function(response)
+    {response.text().thenfunction(text){document.querySelector('article').innerHTML=text;
+
+  })
+});
   }
   if(location.hash){
       fetchPage(location.hash.substr(2));
