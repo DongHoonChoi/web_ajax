@@ -20,7 +20,7 @@
   <div id="grid">
 
     <ol>
-      <li><a onclick="
+      <li><a href="#!about" onclick="
         fetch('about').then(function(response){
           response.text().then(function(text){
             document.querySelector('article').innerHTML = text;
@@ -28,7 +28,7 @@
           })
         });
         "> About 룰랄루라 </a></li>
-      <li> <a onclick="
+      <li> <a href="심리검사" onclick="
         fetch('심리검사').then(function(response){
           response.text().then(function(text){
             document.querySelector('article').innerHTML = text;
@@ -36,7 +36,7 @@
           })
         });
         ">심리검사</a></li>
-      <li> <a onclick="
+      <li> <a href="다이어리" onclick="
         fetch('다이어리').then(function(response){
           response.text().then(function(text){
             document.querySelector('article').innerHTML = text;
@@ -44,7 +44,7 @@
           })
         });
         ">Plan</a></li>
-      <li><a onclick="
+      <li><a href="contact" onclick="
         fetch('contact').then(function(response){
           response.text().then(function(text){
             document.querySelector('article').innerHTML = text;
@@ -67,5 +67,10 @@
   <input type ="button" value="night" onclick="
     nightDay(this)">
 
+    if(location.hash){
+      fetchPage(location.hash.subst(2));
+    }else{
+      fetchPage('welcome');
+    }
 </body>
 </html>
